@@ -1,0 +1,6 @@
+/*
+@author:Oscar Alderete <wordpress@oscaralderete.com>
+@website: https://oscaralderete.com
+@editor: NetBeans IDE v11.2
+*/
+const MarkersOnOpenStreetMap={bounds:[],mapId:"openstreetmap",map:null,icon:L.icon({iconUrl:openstreetmapData.marker_uri,shadowUrl:openstreetmapData.marker_shadow,iconSize:[32,40],shadowSize:[28,25],iconAnchor:[16,40],shadowAnchor:[10,18],popupAnchor:[0,-42]}),init(){if(0===openstreetmapData.markers.length)return alert("MarkersOnOpenStreetMap Plugin\nYou need to enter some markers!"),!1;const x=document.getElementById(this.mapId);x.style.height=`${openstreetmapData.map_height}px`,this.map=L.map(this.mapId).setView([openstreetmapData.lat,openstreetmapData.lng],openstreetmapData.initial_zoom),L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',maxZoom:18,tileSize:512,zoomOffset:-1}).addTo(this.map),openstreetmapData.markers.forEach(obj=>{var lat=parseFloat(obj.latitude),lng=parseFloat(obj.longitude);L.marker([lat,lng],{icon:this.icon}).addTo(this.map).bindPopup(`<p class="map-info"><b>${obj.title}</b><br>${obj.content}</p>`).openPopup(),this.bounds.push([lat,lng])}),this.map.fitBounds(this.bounds)}};MarkersOnOpenStreetMap.init();
