@@ -11,3 +11,5 @@ The only thing you need to run this awesome plugin in your own WordPress site is
 ```
 
 Enjoy it!
+
+(PS: As I mentioned before, this is a clone of https://github.com/oscaralderete/multiple-markers-on-google-maps, so if you find any bug, please, let me know to fix it. Apparently work fine, but who knows!)
