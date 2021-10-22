@@ -1,6 +1,6 @@
 <?php
 /**
-Plugin Name: Multiple Markers On Google Map
+Plugin Name: Markers On OpenStreetMap
 Plugin URI: https://github.com/oscaralderete/markers-on-openstreetmap
 Description: Let's put multiple markers on an OpenStreetMap, the free to use interactive maps provider, on your WordPress page. Define all markers you need on its modern reactive admin page (powered by Vue 3). No keys no fees!
 Version: 1.0
